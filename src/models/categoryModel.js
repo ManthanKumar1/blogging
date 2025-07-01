@@ -1,0 +1,9 @@
+let mongoose = require('mongoose')
+
+let categorySchema = mongoose.Schema({
+    title: {type: String, required: true},
+    desc: {type:String},
+    updatedBy: {type: mongoose.Types.ObjectId, ref: "User", required: true}
+}, {timestamps: true})
+
+module.exports = mongoose.model('Category', categorySchema)
