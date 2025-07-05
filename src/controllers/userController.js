@@ -262,4 +262,4 @@ let currentUser = async function(req, res){
     }
 }
 
-module.exports = { signUp, signIn, verifyCode, verifyUser, sendForgotPassword, recoverPassword, changePassword, updateProfile }
+module.exports = { signUp, signIn, verifyCode, verifyUser, sendForgotPassword, recoverPassword, changePassword, updateProfile, currentUser }

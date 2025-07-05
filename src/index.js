@@ -2,6 +2,7 @@ let http = require('http')
 let morgan = require('morgan')
 let app = require('./app')
 let route = require('./routes/route')
+let errorHandler = require('./middlewares/errorHandler')
 
 // let dotenv = require('dotenv')
 
@@ -14,6 +15,8 @@ app.use('/', route)
 app.use(function (req, res) {
     return res.status(400).send({ status: false, msg: 'Invalid Url' })
 })
+
+app.use(errorHandler);
 
 let { port } = require('../config/keys')
 

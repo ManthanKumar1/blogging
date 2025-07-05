@@ -2,17 +2,17 @@ let express = require('express')
 let router = express.Router()
 
 let { signUp, signIn, verifyCode, verifyUser, sendForgotPassword, recoverPassword, changePassword, updateProfile, currentUser } = require('../controllers/userController')
-let {addCategory, updateCategory, deleteCategory, getAllCategory, getCategory} = require('../controllers/categoryController')
-let {uploadFile, fetchFile, deleteFile} = require('../controllers/fileController')
-let {addPost, updatePost, deletePost, postList, getPost} = require('../controllers/postController')
+let { addCategory, updateCategory, deleteCategory, getAllCategory, getCategory } = require('../controllers/categoryController')
+let { uploadFile, fetchFile, deleteFile } = require('../controllers/fileController')
+let { addPost, updatePost, deletePost, postList, getPost } = require('../controllers/postController')
 
 let { validate, signUpValidator, signInValidator, emailValidator, verifyUserValidator, recoverPasswordValidator, changePasswordValidator, updateProfileValidator } = require('../validations/userValidation')
-let {addCategoryValidator} = require('../validations/categoryValidator')
-let {addPostValidator, updatePostValidator} = require('../validations/postValidator')
+let { addCategoryValidator } = require('../validations/categoryValidator')
+let { addPostValidator, updatePostValidator } = require('../validations/postValidator')
 
-let {authentication} = require('../middlewares/auth')
-let {upload} = require('../middlewares/multerUpload')
-let {awsUpload} = require('../middlewares/awsUpload')
+let { authentication } = require('../middlewares/auth')
+let { upload } = require('../middlewares/multerUpload')
+let { awsUpload } = require('../middlewares/awsUpload')
 
 router.get('/test', function (req, res) {
     return res.status(200).send({ status: true, message: "Code is working fine" })
