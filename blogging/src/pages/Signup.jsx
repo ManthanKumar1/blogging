@@ -1,10 +1,11 @@
 import { useState } from "react"
-import axios from 'axios'
+// import axios from 'axios'
 import signupValidator from "../validators/SignupValidator"
+import axios from "../utils/AxiosInstance"
 
 let initialForm = { name: "", email: "", password: "", confirmPassword: "" }
 let initialFormError = { name: "", email: "", password: "", confirmPassword: "" }
-let url = 'http://localhost:3000/signUp'
+let url = '/signUp'
 
 let SignUp = () => {
     let [formData, setFormData] = useState(initialForm)
