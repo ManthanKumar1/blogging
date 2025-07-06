@@ -1,3 +1,6 @@
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
@@ -27,6 +30,7 @@ function App() {
           <Route path='login' element={<Login />} />
         </Route>
       </Routes>
+      <ToastContainer position="top-center" autoClose={3000} />
     </>
   )
 }
