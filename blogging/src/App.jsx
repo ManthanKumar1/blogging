@@ -1,4 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { ToastContainer } from 'react-toastify'
 
 import { Routes, Route } from 'react-router-dom'
@@ -14,6 +15,13 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import PublicLayout from './components/layout/PublicLayout'
 
+import NewCategory from './pages/category/NewCategory'
+import UpdateCategory from './pages/category/UpdateCategory'
+
+import NewPost from './pages/post/NewPost'
+import DetailPost from './pages/post/DetailPost'
+import UpdatePost from './pages/post/UpdatePost'
+
 function App() {
   return (
     <>
@@ -21,7 +29,14 @@ function App() {
         <Route element={<PrivateLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='category' element={<CategoryList />} />
+          <Route path='category/new-category' element={<NewCategory />} />
+          <Route path='category/update-category' element={<UpdateCategory />} />
+
           <Route path='posts' element={<PostList />} />
+          <Route path='posts/add-post' element={<NewPost />} />
+          <Route path='posts/detail-post' element={<DetailPost />} />
+          <Route path='posts/update-post' element={<UpdatePost />} />
+          
           <Route path='profile' element={<Profile />} />
           <Route path='setting' element={<Setting />} />
         </Route>

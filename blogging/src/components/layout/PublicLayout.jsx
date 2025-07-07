@@ -1,8 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom"
 import PublicNavbar from "../PublicNavbar"
+import { UseAuth } from "../context/AuthContext"
 
 let PublicLayout = () => {
-    let auth = false
+    let auth = UseAuth()
 
     if(auth){
         return <Navigate to='/' />

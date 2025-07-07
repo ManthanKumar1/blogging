@@ -57,10 +57,11 @@ let SignUp = () => {
             }
         }
     }
+    
     return (
         <div className="form-container">
             <form className="inner-container" onSubmit={handleSubmit}>
-                <h2 className="form-title">Signup Form</h2>
+                <h2 className="form-title">Signup</h2>
                 <div className="form-group">
                     <label>Name</label>
                     <input

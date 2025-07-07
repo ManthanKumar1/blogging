@@ -49,8 +49,8 @@ input[type="textarea"]{
 }
 
 .button{
-    display: block;
-    margin: 0 auto;
+    /* display: block;
+    margin: 0 auto; */
     justify-content: center;
     border: 1px solid #999;
     padding: 7px 15px;
