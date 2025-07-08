@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { toast } from "react-toastify"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import axios from "../utils/AxiosInstance"
 
 import loginValidator from "../validators/LoginValidator"
@@ -82,6 +82,8 @@ let Login = () => {
                     />
                     {formError.password && <p className="error">{formError.password}</p>}
                 </div>
+
+                <Link className="forgot-password" to="/forgot-password">Forgot Password?</Link>
 
                 <div className="form-group">
                     <input className="button" type="submit" value={loading ? 'Saving....' : 'Login'} />

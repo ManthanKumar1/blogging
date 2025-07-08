@@ -13,6 +13,7 @@ import PrivateLayout from './components/layout/PrivateLayout'
 
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import ForgotPassword from './pages/ForgotPassword'
 import PublicLayout from './components/layout/PublicLayout'
 
 import NewCategory from './pages/category/NewCategory'
@@ -38,16 +39,17 @@ function App() {
           <Route path='posts/add-post' element={<NewPost />} />
           <Route path='posts/detail-post' element={<DetailPost />} />
           <Route path='posts/update-post' element={<UpdatePost />} />
-          
+
           <Route path='profile' element={<Profile />} />
           <Route path='setting' element={<Setting />} />
-          
-          <Route path='verify-user' element={<VerifyUser />} />
 
+          <Route path='verify-user' element={<VerifyUser />} />
         </Route>
+
         <Route element={<PublicLayout />}>
           <Route path='signup' element={<Signup />} />
           <Route path='login' element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Route>
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
