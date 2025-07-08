@@ -22,6 +22,8 @@ import NewPost from './pages/post/NewPost'
 import DetailPost from './pages/post/DetailPost'
 import UpdatePost from './pages/post/UpdatePost'
 
+import VerifyUser from './pages/VerifyUser'
+
 function App() {
   return (
     <>
@@ -39,6 +41,9 @@ function App() {
           
           <Route path='profile' element={<Profile />} />
           <Route path='setting' element={<Setting />} />
+          
+          <Route path='verify-user' element={<VerifyUser />} />
+
         </Route>
         <Route element={<PublicLayout />}>
           <Route path='signup' element={<Signup />} />

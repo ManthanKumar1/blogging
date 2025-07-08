@@ -2,6 +2,7 @@ import { useState } from "react"
 import { toast } from "react-toastify"
 import { useNavigate } from "react-router-dom"
 import axios from "../utils/AxiosInstance"
+import { UseAuth } from "../components/context/AuthContext"
 
 import passwordValidator from "../validators/PasswordValidator"
 
@@ -15,6 +16,8 @@ let Setting = () => {
     let [loading, setLoading] = useState(false)
 
     let navigate = useNavigate()
+
+    let auth = UseAuth()
 
     let handleChange = (e) => {
         setFormData((previous) => ({ ...previous, [e.target.name]: e.target.value }))
@@ -52,7 +55,7 @@ let Setting = () => {
         <div>
             <button className="button button-block" onClick={()=> navigate(-1)}>Back</button>
             <br />
-            <button className="button button-block">Verify User</button>
+            {!auth.isVerified && <button className="button button-block" onClick={()=> navigate('/verify-user')}>Verify User</button>}
 
             <div className="form-container">
                 <form className="inner-container" onSubmit={handleSubmit}>
