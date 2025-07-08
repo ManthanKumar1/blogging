@@ -39,14 +39,14 @@ let addPost = async function (req, res) {
 
 let updatePost = async function (req, res) {
     try {
-        let { id } = req.query
-        let checkId = await postModel.findOne({ _id: id })
+        let { postId } = req.query
+        let checkId = await postModel.findOne({ _id: postId })
         if (!checkId) {
             return res.status(404).send({ status: false, message: "Post not found" })
         }
 
-        let { userId } = req.token
-        let checkUser = await userModel.findOne({ _id: userId })
+        let { id } = req.token
+        let checkUser = await userModel.findOne({ _id: id })
         if (!checkUser) {
             return res.status(404).send({ status: false, message: "User not found" })
         }
@@ -54,7 +54,7 @@ let updatePost = async function (req, res) {
         let data = req.body
         let { title, desc, file, category, updatedBy } = data
 
-        data.updatePost = userId
+        data.updatedBy = id
 
         if (file) {
             let checkFile = await fileModel.findOne({ _id: file })
@@ -74,8 +74,8 @@ let updatePost = async function (req, res) {
         checkId.desc = desc ? desc : checkId.desc
         checkId.file = file ? file : checkId.file
         checkId.category = category ? category : checkId.category
-        checkId.updatedBy = userId ? userId : checkId.updatedBy
-        await post.save()
+        checkId.updatedBy = id ? id : checkId.updatedBy
+        await checkId.save()
 
         return res.status(200).send({ status: true, message: "Post updated successfully" })
     } catch (error) {
@@ -120,7 +120,7 @@ let postList = async function (req, res) {
         let pages = Math.ceil(total / sizeNumber)
 
         let fetchPost = await postModel.find(query).sort({ updatedBy: -1 }).skip((pageNumber - 1) * sizeNumber).limit(sizeNumber)
-        return res.status(200).send({ status: true, message: "All post", total: total, page: pages, data: fetchPost })
+        return res.status(200).send({ status: true, message: "All post", total: total, pages: pages, data: fetchPost })
     } catch (error) {
         return res.status(500).send({ status: false, message: error.message })
     }
@@ -130,6 +130,8 @@ let getPost = async function (req, res) {
     try {
         let { id } = req.query
         let checkId = await postModel.findOne({ _id: id }).populate('file').populate('category').populate('updatedBy', '-userPassword')
+
+        // let checkId = await postModel.findOne({ _id: id })
         if (!checkId) {
             return res.status(404).send({ status: false, message: "Post not found" })
         }

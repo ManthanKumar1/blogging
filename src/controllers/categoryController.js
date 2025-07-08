@@ -97,7 +97,7 @@ let getAllCategory = async function (req, res) {
         let pages = Math.ceil(total/sizeNumber)
 
         let category = await categoryModel.find(query).skip((pageNumber - 1) * sizeNumber).limit(sizeNumber).sort({updatedBy: -1})
-        return res.status(200).send({ status: true, message: "Category List", total: total, pageNumber: pages, data: category })
+        return res.status(200).send({ status: true, message: "Category List", total: total, pages: pages, data: category })
     } catch (error) {
         return res.status(500).send({ status: false, message: error.message })
     }

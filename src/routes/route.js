@@ -45,7 +45,7 @@ router.delete('/deleteFile', authentication, deleteFile)
 router.post('/addPost', authentication, addPostValidator, validate, addPost)
 router.put('/updatePost', authentication, updatePostValidator, validate, updatePost)
 router.delete('/deletePost', authentication, deletePost)
-router.post('/postList', authentication, postList)
-router.post('/getPost', authentication, getPost)
+router.get('/postList', authentication, postList)
+router.get('/getPost', authentication, getPost)
 
 module.exports = router
