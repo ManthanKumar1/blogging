@@ -1,0 +1,68 @@
+Ques1. What is node.js?
+Ans1. Node.js is a javascript runtime, build on chrome's V8 engine.
+
+Ques2. What is runtime?
+Ans2. A runtime environment is an environment where your code will be executed. A javascript code can run in different types of environment some of them are node.js, service workers, or in a web browser.
+
+Ques3. Define the language or Syntactical definition.
+Ans3. Console.log("Something") / let var a = 10; / if(var>10) console.log(("It's larger than 10")
+
+Ques4. Execute the language?
+Ans4. .js file ----------> execute the language by a engine -----------> machine code.
+
+Ques5. Who is the founder of node.js?
+Ans5. Ryan dahl is a founder of node.js and it is created in 2011.
+
+Ques6. How node.js works?
+Ans6. client ------request----> server
+      client <-----response----- server
+
+Ques7. How web server work?
+Ans7. 1. Non blocking I/O and 2. Asynchronous or callback
+
+Ques8. Node.js is synchronous or asynchronous?
+Ans8. Node.js is asynchronous and single threaded.
+
+Ques9. What is Event Loop?
+Ans9. Event loop execute the synchronous task first and store asynchronous task on queue when stack is empty then send all the asynchronous task in stack to execute.
+
+Ques10. What is Express.js?
+Ans10. Express.js is a framework of node.js.
+
+Ques11. How many frameworks of node.js?
+Ans11. Other frameworks of node.js: 1. Total.js, 2. Derby.js, 3. Hapi.js, 4. Nest.js, 5. Sails.js, 6. Express.js
+
+Ques12. How many types of data request is use?
+Ans12. Get, post, put, patch, delete.
+
+Ques13. What is use of get?
+Ans13. Get is use for fetching the data.
+
+Ques14. What is use of post?
+Ans14. Post is use for saving the data.
+
+Ques15. What is use of put and patch?
+Ans15. It is use for updating the data.
+
+Ques16. What is use of delete?
+Ans16. Delete is use for deleting the data.
+
+Ques17. What is middleware?
+Ans17. A middleware is a function. in middleware function we have access of request and response cycle and a next function.
+
+Ques18. Types of middleware?
+Ans18. 1. App level, 2. Route level, 3. Error handling, 4. Build-in, 5. Third-party.
+
+Ques19. What is database?
+Ans19. Database is a storage where we are store our data. database is easily add, update, fetch and delete data from database.
+
+Ques20. Types of database?
+Ans20. 1. RDBMS (Relational Database Management System), 2. Non-Relational Database Management System.
+
+Ques21. What is ODM?
+Ans21. ODM stands for Object Data Modeling.
+
+Ques22. Benefits of mongoose?
+Ans22. 1. Abstraction from low level mongodb driver, 2. Relationship between NoSql data, 3. Provide schema validation, 4. Object data mappping, 5. 40% less code.
+
+Ques 23. 

@@ -1,0 +1,5 @@
+https://medium.com/@jahidhiron/javascript-closures-the-ultimate-guide-with-hands-on-examples-c31e45a68d9e
+
+https://medium.com/@jahidhiron/javascript-var-let-and-const-the-ultimate-guide-with-hands-on-examples-f5a21756b689
+
+https://medium.com/@jahidhiron/javascript-prototype-the-ultimate-guide-with-hands-on-examples-1de59a07b91d

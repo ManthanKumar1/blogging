@@ -1,0 +1,65 @@
+Ques1. What is React?
+Ans1. React is a JavaScript Library, for building User Interface(UI) in Web application.
+
+Ques2. What is Library?
+Ans2. A library is a collections of code, we can build application by re-using this collections of code.
+
+Ques3. What is Virtual DOM?
+Ans3. The virtual DOM (Document Object Model) is a programming concept where a lightweight, in-memory representation of a UI is kept in sync with the actual DOM in a browser.
+
+Ques4. How DOM works?
+Ans4. Html -------> html parser -----> DOM
+					|
+				      Attached ----> Render tree ----> Painting -----> Display
+					|
+      Css -------> Css parser -------> CSSOM
+
+Ques5. Difference between js and jsx?
+Ans5. Js is use for write javascript code with html which is hard to write but jsx is easy to use it convert html code with javascript code automatically.
+
+Ques6. What is component?
+Ans6. In React, a component is a self-contained, reusable piece of code that defines a specific part of the user interface (UI).
+
+Ques7. What is Props?
+Ans7. if we want to change the name of particular field or component so we can use props. its easy to change the props element.
+
+Ques8. What is State? 
+Ans8. The state is a built-in React object that is used to contain data or information about the component.
+
+Ques9. What is higher order component?
+Ans9. A higher order component is a function that takes a component as parameter and return new components.
+
+Ques10. What is render props?
+Ans10. Render props component then normally a component returns the jsx element. But in our component it is not returning the jsx element. Rather this component is returning logic within a function. And based on this logic jsx element is render and this is called render props pattern. So our render props is a props whose return component render logic.
+
+Ques11. What is React Hook?
+Ans11. A React hooks are simply javascript function that can use to isolate the reusable part from a functional component.
+
+Ques12. Types of Hooks?
+Ans12. useState, useContext, useEffect, useCallback, useMemo, useRef, useReducer, Custom hook, etc.
+
+Ques13. Hook rules?
+Ans13. 1. Hook is used at the top of functional component.
+       2. Hooks are used only functional component.
+       3. Hooks are not used within functions inside functional component.
+       4. Hooks are not used in plain javascript file.
+
+Ques14.React responsibilities?
+Ans14. 1. Render / Re-render JSX code.
+       2. Manage states and props.
+       3. Evaluating state/props
+       4. React to events or input
+
+Ques15. Side effect example in react?
+Ans15. 1. Fetching data from API.
+       2. Updating DOM.
+       3. Setting any subscriptions or timer etc.
+
+Ques16. What is React router?
+Ans16. This library helps us to create and navigate between different urls that make up your web application. It also provides unique url for defining component in the app and makes the ui easily shareable with other user.
+
+https://medium.com/@jahidhiron/javascript-closures-the-ultimate-guide-with-hands-on-examples-c31e45a68d9e
+
+https://medium.com/@jahidhiron/javascript-var-let-and-const-the-ultimate-guide-with-hands-on-examples-f5a21756b689
+
+https://medium.com/@jahidhiron/javascript-prototype-the-ultimate-guide-with-hands-on-examples-1de59a07b91d
